@@ -5,7 +5,7 @@ const sql = require('mssql');
 const config = {
   user: 'sa',
   password: 'local',
-  server: 'SQLSERVER',
+  server: '10.9.8.74',
   database: 'API_SIG',
   options: {
     encrypt: true,
