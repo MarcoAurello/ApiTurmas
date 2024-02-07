@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Turmas",
+    "version": "1.0.0",
+    "description": "###"
+  },
+  "servers": [
+    {
+      "url": "http://10.9.9.208:3000",
+      "description": "Servidor de Desenvolvimento"
+    }
+  ],
+  "paths": {
+    "/api/turmas": {
+      "get": {
+        "summary": "Retorna a lista de matrículas",
+        "description": "Obtém a lista de matrículas com paginação",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Número máximo de matrículas a serem retornadas Max 50"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Página atual"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso. Retorna a lista de matrículas"
+          },
+          "401": {
+            "description": "Autenticação requerida"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
