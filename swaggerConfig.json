@@ -7,7 +7,8 @@
   },
   "servers": [
     {
-      "url": "http://10.9.9.208:3357",
+      
+      "url": "https://www7.pe.senac.br/apiturmas",
       "description": "Servidor de Desenvolvimento"
     }
   ],
